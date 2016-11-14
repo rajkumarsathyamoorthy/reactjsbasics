@@ -1,0 +1,105 @@
+body {
+    font-family: monospace;
+    margin: 0;
+    background: #009688;
+}
+
+#app {
+    background: #fff;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dropdown {
+    position: absolute;
+    top: 43px;
+    left: 4px;
+}
+
+.btns li {
+    float: left;
+    list-style: none;
+}
+
+.btns li a {
+    border: 1px solid #03a9f4;
+    padding: 10px;
+    background: #03a9f4;
+    color: #fff;
+    display: block;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tray {
+    display: block;
+    font-size: 12px;
+    clear: both;
+    padding: 10px;
+    border: 1px solid #03a9f4;
+    background: #fff;
+}
+
+.btns li a.active {
+    background: #fff;
+    border-bottom: 2px solid #fff;
+    margin-bottom: -1px;
+    color: #60716b;
+    text-decoration: none;
+}
+
+.red {
+    background: #333;
+    color: red;
+}
+
+.clearfix:after {
+    content: " ";
+    /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.tray * {
+    margin: 0;
+    float: left;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+
+.tray h2 {
+    width: 70%;
+    padding: 5px;
+}
+
+.tray img {
+    width: 30%;
+    padding: 5px;
+}
+
+.badge {
+    display: block;
+    background: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid pink;
+    margin-bottom: 5px;
+}
+
+button {
+    border: 1px solid #1994cc;
+    outline: 0;
+    cursor: pointer;
+    background: #03a9f4;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 2px;
+    border-radius: 3px;
+}
