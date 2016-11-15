@@ -88,9 +88,9 @@ onAlert() {
          <div>
 
             <ul className="btns">
-            <li> <Link to="/home" activeClassName="active">Home</Link></li>
-            <li> <Link to="/contact" activeClassName="active">Contact</Link></li>
-            <li> <Link to="/about" activeClassName="active" >Aboutus</Link></li>
+            <li> <Link to="/home" activeClassName="active">CSS Transitions</Link></li>
+            <li> <Link to="/contact" activeClassName="active">CSS Animations</Link></li>
+            <li> <Link to="/about" activeClassName="active" >Reactjs-Transition</Link></li>
             </ul>
             <div className="tray clearfix">
               {this.props.children}

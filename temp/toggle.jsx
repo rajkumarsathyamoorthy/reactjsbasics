@@ -1,5 +1,23 @@
 import React from 'react';
 
+class DummyText extends React.Component{
+  render(){
+    return(
+      <div>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+      ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut a
+      liquip ex ea commodo consequat. Duis aute irure dolor in reprehender
+      it in voluptate velit esse cillum dolore eu fugiat nulla pariatur. E
+      xcepteur sint occaecat cupidatat non proident, sunt in culpa qui off
+      icia deserunt mollit anim id est laborum.</p>
+
+      <h1>Toggle Menu in React</h1>
+      </div>
+    )
+  }
+}
+
 var NavMenu = React.createClass({
         getDefaultProps: function()
         {
@@ -89,9 +107,11 @@ var NavMenu = React.createClass({
             var _style = {
                 width: "50%",
                 float: "left",
-                height: "300px",
+                height: "auto",
                 position: "relative",
-                backgroundColor: "#eaefe3"
+                backgroundColor: "#eaefe3",
+                padding: "10px",
+                boxSizing: "border-box"
             };
             var _style1 = {
                 background: "#232527",
@@ -105,10 +125,12 @@ var NavMenu = React.createClass({
               <div className="clearfix">
                 <div style={_style} className={this.state.myClass ? "Open" : "Close"} onClick={this.handleBodyClick}>
                     <button  onClick={this.handleClick}>Menu</button>
+                    <DummyText/>
                     <NavMenu isOpen={this.state.isOpen} />
                 </div>
                 <div style={_style} className={this.state.myClass ? "Open" : "Close"} onClick={this.handleBodyClick}>
                     <button  onClick={this.handleClick}>Menu</button>
+                      <DummyText/>
                     <NavMenu isOpen={this.state.isOpen} />
                 </div>
               </div>

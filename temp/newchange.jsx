@@ -1,5 +1,6 @@
 import React from 'react';
 
+let Kumar = "kumar"
 export default class Changeit extends React.Component{
 
   constructor(props){
@@ -11,15 +12,15 @@ export default class Changeit extends React.Component{
 
   showIt(newname){
     this.setState({
-      name: newname
+      name: this.state.name == newname ? this.props.myname : newname
     })
 
   }
   render(){
     return(
-      <div>
+      <div className="badge">
         <h1>Hi Change the name {this.state.name}</h1>
-        <button onClick={() => this.showIt('Kumar')}>Change it</button>
+        <button onClick={() => this.showIt(Kumar)}>Change it</button>
       </div>
     )
   }

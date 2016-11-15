@@ -31,7 +31,7 @@ export default class Footer extends React.Component{
         <button onClick={() => this.resetAge()} className="btns">Reset Age</button>
         <button onClick={this.props.greet} className="btns">Greet</button>
         <ul>
-            {this.props.biodata.place.map((place) => <li>{place}</li>)}
+            {this.props.biodata.place.map((place) => <li key={place}>{place}</li>)}
         </ul>
     </div>
     )

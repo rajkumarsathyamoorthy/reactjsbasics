@@ -1,18 +1,42 @@
 import React from 'react';
 
+const styles = {
+ transition: "all 1s ease-in"
+}
+
 export default class Home extends React.Component{
+
+  constructor(){
+    super();
+    this.state = {
+      opacity:1,
+      scale:1,
+      showhide: "hide"
+    }
+  }
+
+  onHide(){
+    this.setState({
+      opacity: this.state.opacity < 1 ? 1 : 0,
+      scale: this.state.scale > 1 ? 1 : 1,
+      showhide: this.state.showhide === "hide" ? "show" : "hide"
+    })
+  }
+
+  onScale(){
+    this.setState({
+      scale: this.state.scale > 1 ? 1 : 1.1
+    })
+  }
+
   render(){
     return(
       <div className="aboutus">
-      <img src="./assets/images/home.jpg"/>
-        <h2><strong>Home</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend
-        erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ex
-        cepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-         deserunt mollit anim id est laborum.</h2>
-
+          <div style={{...styles, opacity:this.state.opacity, transform: 'scale('+this.state.scale+')'}} className="animatable-obj"></div>
+          <div className="button-group">
+            <button onClick={this.onScale.bind(this)}>Scale</button>
+            <button  onClick={this.onHide.bind(this)}>{this.state.showhide}</button>
+          </div>
       </div>
     )
   }

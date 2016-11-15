@@ -15,7 +15,8 @@ var DisplayContainer3 = React.createClass({
 			requestChange: this.update
 		};
 		return (
-			<div className="DisplayContainer">
+			  <div className="badge">
+				<h1>Two Way Databinding in React</h1>
 				<h4>{this.state.value}</h4>
 				<InputBox3 customValueLink={customValueLink} />
 			</div>
