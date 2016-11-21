@@ -5,12 +5,21 @@ import Changeit from './temp/newchange.jsx';
 import Myfilterapp from './temp/filtersearch.jsx';
 import NavMenuButton from './temp/toggle.jsx';
 import DisplayContainer3 from './temp/twowaydb.jsx';
+import ButtonHeader from './temp/parentbutton.jsx';
 import { Router, Route, Link, browserHistory, IndexRoute, IndexLink } from 'react-router';
 
-class App extends React.Component {
+var App = React.createClass({
 onAlert() {
  alert("Hello")
-}
+},
+
+
+
+handleClick: function(e)
+{
+  e.preventDefault();
+  e.stopPropagation();
+},
    render() {
    let home = "";
 
@@ -85,8 +94,7 @@ onAlert() {
 
 
       return (
-         <div>
-
+         <div className="raj" onClick={this.doSomething}>
             <ul className="btns">
             <li> <Link to="/home" activeClassName="active">CSS Transitions</Link></li>
             <li> <Link to="/contact" activeClassName="active">CSS Animations</Link></li>
@@ -95,6 +103,10 @@ onAlert() {
             <div className="tray clearfix">
               {this.props.children}
             </div>
+            <div className="badge">
+             <ButtonHeader/>
+            </div>
+            <NavMenuButton />
             <NavMenuButton />
             <span className="badge">Hello World!!!</span>
             <Footer biodata={biodata} greet={this.onAlert} age={23} footertext={"Copyrighted by Rajkumar 2013"} />
@@ -106,6 +118,6 @@ onAlert() {
          </div>
       );
    }
-}
+})
 
 export default App;

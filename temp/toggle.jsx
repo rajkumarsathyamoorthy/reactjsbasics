@@ -122,15 +122,10 @@ var NavMenu = React.createClass({
                 margin: "10px"
             }
             return (
-              <div className="clearfix">
-                <div style={_style} className={this.state.myClass ? "Open" : "Close"} onClick={this.handleBodyClick}>
+              <div className="clearfix" style={_style}>
+                <div  className={this.state.myClass ? "Open" : "Close"} onClick={this.handleBodyClick}>
                     <button  onClick={this.handleClick}>Menu</button>
                     <DummyText/>
-                    <NavMenu isOpen={this.state.isOpen} />
-                </div>
-                <div style={_style} className={this.state.myClass ? "Open" : "Close"} onClick={this.handleBodyClick}>
-                    <button  onClick={this.handleClick}>Menu</button>
-                      <DummyText/>
                     <NavMenu isOpen={this.state.isOpen} />
                 </div>
               </div>
