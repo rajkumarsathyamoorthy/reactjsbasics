@@ -6,6 +6,7 @@ import Myfilterapp from './temp/filtersearch.jsx';
 import NavMenuButton from './temp/toggle.jsx';
 import DisplayContainer3 from './temp/twowaydb.jsx';
 import ButtonHeader from './temp/parentbutton.jsx';
+import ServiceChooser from './temp/order-cart.jsx';
 import { Router, Route, Link, browserHistory, IndexRoute, IndexLink } from 'react-router';
 
 var App = React.createClass({
@@ -111,6 +112,25 @@ handleClick: function(e)
       color: ["moderart"]
    }]
 
+   var services = [
+       {
+           name: 'Web Development',
+           price: 300
+       }, {
+           name: 'Design',
+           price: 400
+       }, {
+           name: 'Integration',
+           price: 250
+       }, {
+           name: 'Training',
+           price: 220
+       },
+       {
+           name: 'Warping',
+           price: 200
+       }
+   ];
 
       return (
          <div className="raj" onClick={this.doSomething}>
@@ -133,6 +153,7 @@ handleClick: function(e)
             <Changeit myname="raj"/>
             <Myfilterapp items={libraries}/>
             <DisplayContainer3/>
+            <ServiceChooser items={services}/>
 
          </div>
       );
